@@ -1,0 +1,168 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #ccc;
+}
+
+/*h1, h2, h3, h4, h5, h6{font-family: 'slick';}*/
+
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+    opacity: 1;
+
+    width: 32px;
+    height: 31px;
+    margin-top: -10px;
+    padding: 0;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    opacity: 0.55;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 0;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    width: 32px;
+    height:31px;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-prev
+{
+    left: 10px;
+    margin-left: -80px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAYAAACGVs+MAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDIzRDJGMzlDMjM5MTFFM0E4NDFGNzk5MDQ4MTFBNjMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDIzRDJGM0FDMjM5MTFFM0E4NDFGNzk5MDQ4MTFBNjMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpEMjNEMkYzN0MyMzkxMUUzQTg0MUY3OTkwNDgxMUE2MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpEMjNEMkYzOEMyMzkxMUUzQTg0MUY3OTkwNDgxMUE2MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtTw/aAAAAJaSURBVHjatJexS1tRFMZvYqEYsO1Q3vOB7eCQOHQIIS0oFUmQNiDtVEdbcMnQSQf/CUs35w5duxXFOgRE20EkyeBgshhUkASCtkKCGWy/r5yIUV/evcl7B36QvJx7vu/e3PfeuaFsNqs04xF4DSbBM/AUPJDf/oBDsAe2wTo40yl6TyOHYgvgLbjvkvNYSID34AJ8B5/FlGuEPWa8IjOa7SJ+VzD3nYxdkVpGBl6AX2DOw6RXhKUGayV1DbyS5RtR/gVrrUrtrgbGwVcwqPyPQak97mbACVD8pgnnLgOfgKWCD0vujg4DU+BNL9Wi0aiKx+Omw2ZE8+o5sNSreCKR+P85FAqpQqFgMpyam1yBUXm69SzOiMVipitBzVEayPQr3o5Go2FaKhM2nb2beD6fV+Vy2dTAS+6BmG52KpVStm37Jc4YowFbJzOdTivLsvwUZ9j8C4Z0Zh6AOGOIBs69sniLBRTnNFDzysrlcqpWu53GzchN2UdUaWBfJ5MmqtWq3yb2B5LJ5DA+TOtkVyoV1Wq1lOM4Hdf5ndfr9bqpgS9cgTXwV3cENx03nw8rQc01GjgAWyYj3UxEIhGTMtQ8aL8Nl03X7qaJUqmkisWiSYnl62/DTWmZZkxNtGduKL4qmh1t+SJ4btqU9PAgqonWrY7oBHwAzQC7oaZonLg1pT+ljW4GJD4nGl3b8g1pz459FD+W/bWhezDZARPSwV72IXwpNVhr1/RoxsPlRzYN4Juc93TjQsZMSo2zfg6nPFzOy/kuc+10/AQ8lJzf4Ehy+YD5AU51nP4TYAD4d6jnpceyOgAAAABJRU5ErkJggg==');
+    opacity: 1;
+    z-index: 9;
+}
+.slick-next
+{
+    right: 10px;
+    margin-right: -80px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAYAAACGVs+MAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0M5N0VCQkNDMjM5MTFFM0JFOEFFQzU1NDc2QUJFRjUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0M5N0VCQkRDMjM5MTFFM0JFOEFFQzU1NDc2QUJFRjUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQzk3RUJCQUMyMzkxMUUzQkU4QUVDNTU0NzZBQkVGNSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQzk3RUJCQkMyMzkxMUUzQkU4QUVDNTU0NzZBQkVGNSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhDiZf8AAAI8SURBVHjaxJcxS0JRFMcvIoSI1RDvIVSDgzY0qFRgJKFDCVJTjRa0ODTV0Jco2vwErW2hlIMiZUOEOjSkS1CC+JYsQXHRzomjaPn03ucTD/wG9Z7z/7/re/edYwyHw4wzZoFtwAssA4vANP32DbwDL8ADcAtUeIoaOdag2AmwC0yprJkj3MAB0ABugEsypRqGIVccoSvaHyDeL3DtHuVGqJaQgTXgEQgNMTksDFQDa63wGtii7Ztn+gXWilLtgQY8wBVgYvqHiWp71AxYxyj+14S1n4ELQGLjD4mejh4Dm8COSBWn08nsdrtWE0HS7JwDZyLZLpeLORyOzudCoaDFBGqmcAdsdLpxX3m3uNvt1roTqGlDAwGRrFqt9u+7EUwEDCJX397uTCajl4kNNOAQzRpkwufziZRaQgOylr1TMyHLMvP7/bxlZDRg0fosqZmQJIl3JyxooMomF1U0oGjNxpsO//e/oSgKSyaTPCXKaOBVT/FyucwSiQRvmVcjNQ1BPcTxfhA8FdO4AzGgNQFx1IyhgTfgnjfLbDbrIc5I8639Njznzcpmsyyfz48q3tFsvw1T1DIFeU20Wq3f94JG8Shp9rTlp8Aqb1OSy+W0Pr0Kaf3riErAIVAf48FTJ42SWlOapja6PibxEGkMbMvj1J4VdRQv0v0V5x1MnoB16mCbIwg3qQbWehYdzXC4PMamAbimeY83GpTjpRqVUYZTHC6PaL4LdE3HC8AMrfkCPmgtHjB3wCeP0x8BBgCy36ldfjbFYwAAAABJRU5ErkJggg==');
+    opacity: 1;
+}
+/* Dots */
+.slick-slider
+{
+    margin-bottom: 9px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -45px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 30px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}

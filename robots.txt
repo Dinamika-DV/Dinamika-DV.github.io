@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /old/
+Disallow: /cgi-bin/
+Allow: /
+Host: dinamika-dv.ru
+
+User-agent: Yandex
+Disallow: /old/
+Disallow: /cgi-bin/
+Allow: /
